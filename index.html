@@ -17,7 +17,22 @@
             margin: 0; 
             padding: 20px; 
         }
-        .container { max-width: 1100px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .container { 
+            max-width: 1100px; 
+            margin: auto; 
+            
+            /* 🎯 核心密技 1：將 background: white 改為 80% 的半透明白底，讓背景圖透出來 */
+            background: rgba(255, 255, 255, 0.8); 
+            
+            /* 🎯 核心密技 2：加入毛玻璃模糊特效，後方的風景圖會自動霧化，文字會超級清晰好讀 */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* 確保 iPhone/Safari 瀏覽器也能完美呈現 */
+            
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+        }
+        
         h1 { color: #0056b3; text-align: center; }
         #search { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
         
